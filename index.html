@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding and responsive scaling -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page identity -->
+    <title>Dela Akpalu — Portfolio & Resume</title>
+    <meta name="description" content="Portfolio of Dela Akpalu — projects, publications, teaching, and resume.">
+    <meta name="author" content="Dela Akpalu">
+    <link rel="canonical" href="https://dela-ea.github.io/">
+
+    <!-- PWA/Theme basics (optional but nice) -->
+    <meta name="theme-color" content="#0f172a"> <!-- slate-900 -->
+    <link rel="manifest" href="/site.webmanifest"> <!-- create later (icons, name, theme) -->
+
+    <!-- Open Graph / Twitter for rich previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dela Akpalu">
+    <meta property="og:title" content="Dela Akpalu — Portfolio & Resume">
+    <meta property="og:description" content="Projects, research, and resume.">
+    <meta property="og:url" content="https://dela-ea.github.io/">
+    <meta property="og:image" content="/assets/og-image.jpg"> <!-- 1200x630 -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dela Akpalu — Portfolio & Resume">
+    <meta name="twitter:description" content="Projects, research, and resume.">
+    <meta name="twitter:image" content="/assets/og-image.jpg">
+
+    <!--  Favicons (generate with real files when you can) -->
+    <link rel="icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- 180x180 -->
+
+    <!-- Styles: keep it simple (use your own CSS or a framework) -->
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/styles.css">
+
+    <!--  Structured data (helps SEO). Fill your real profiles/urls. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dela Akpalu",
+        "url": "https://dela-ea.github.io/",
+        "jobTitle": "Statistician / Data Scientist",
+        "description": "Portfolio of projects in statistics, data science, and teaching.",
+        "email": "mailto:dela.eak@gmail.com",
+        "sameAs": [
+            "https://github.com/dela-ea",
+            "https://www.linkedin.com/in/edakpalu/",
+            "https://scholar.google.com/citations?user=<id>"
+        ]
+    }
+    </script>
+
+    <!-- Basic social sharing preview for messaging apps (fallback) -->
+    <meta name="image" content="/assets/og-image.jpg">
+
+    <!-- Minimal CSS reset (optional; you can move these into styles.css) -->
+    <style>
+        :root {
+            --bg: #0b1020;        /* dark base */
+            --panel: #0f172a;     /* slate-900 */
+            --text: #e5e7eb;      /* gray-200 */
+            --muted: #a1a1aa;     /* zinc-400 */
+            --accent: #22d3ee;    /* cyan-400 */
+            --card: #111827;      /* gray-900 */
+            --border: #1f2937;    /* gray-800 */
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #ffffff;
+                --panel: #f8fafc; /* slate-50 */
+                --text: #0f172a;  /* slate-900 */
+                --muted: #475569; /* slate-600 */
+                --accent: #0891b2;/* cyan-700 */
+                --card: #ffffff;
+                --border: #e2e8f0;/* slate-200 */
+            }
+        }
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            background: var(--bg);
+            color: var(--text);
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { width: min(1000px, 92%); margin-inline: auto; }
+        header {
+            position: sticky; top: 0; z-index: 50;
+            backdrop-filter: blur(10px);
+            background: color-mix(in oklab, var(--bg) 80%, transparent);
+            border-bottom: 1px solid var(--border);
+        }
+        nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+        .nav-links { display: flex; gap: 1rem; }
+        .btn { display: inline-block; padding: 0.6rem 1rem; border: 1px solid var(--border); border-radius: 9999px; background: var(--panel); color: var(--text); }
+        .btn.primary { background: var(--accent); color: #0b1020; border-color: transparent; font-weight: 600; }
+        .hero { padding: 4rem 0 2rem; }
+        .hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 0.5rem; }
+        .hero p { color: var(--muted); max-width: 70ch; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1rem; }
+        .card h3 { margin-top: 0; }
+        section { padding: 2rem 0; }
+        footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--muted); font-size: 0.95rem; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+    </style>
+</head>
+
+<body>
+    <!-- Skip to content for keyboard users -->
+    <a class="sr-only" href="#main">Skip to content</a>
+
+    <!-- Header / Navigation -->
+    <header role="banner" aria-label="Site header">
+        <div class="container">
+            <nav aria-label="Primary">
+                <a href="#" class="logo" aria-label="Homepage">Dela Akpalu</a>
+                <div class="nav-links" role="navigation">
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <!--  Hero / intro -->
+        <section class="hero" id="home">
+            <h1>Hi, I’m Dela — Statistician & Data Scientist</h1>
+            <p>I build well-tested, reproducible data and modeling pipelines in R, Python, and Stan. I care about clarity, teaching, and making complex analyses understandable.</p>
+            <p>
+                <a class="btn primary" href="/assets/Dela_Akpalu_Resume.pdf" target="_blank" rel="noopener">Latest Resume (PDF)</a>
+                <a class="btn" href="https://github.com/dela-ea" target="_blank" rel="noopener">GitHub</a>
+            </p>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Selected Projects</h2>
+            <div class="grid" role="list">
+                <article class="card" role="listitem">
+                    <h3>Human Patient Activity Prediction</h3>
+                    <p>Supervised pipeline classifying patient activities with ~90% accuracy; reduced false positives via change‑point features.</p>
+                    <p><strong>Tech:</strong> Python, scikit-learn, XGBoost, ROC/PR, Airflow</p>
+                    <p>
+                        <a href="/projects/human-activity.html">Case study</a>
+                        · <a href="https://github.com/dela-ea" target="_blank" rel="noopener">GitHub profile</a>
+                    </p>
+                </article>
+
+                <article class="card" role="listitem">
+                    <h3>Logistics Analytics & Recommender System</h3>
+                    <p>Scalable recommender with modular SQL transforms; 30% latency reduction through query optimization.</p>
+                    <p><strong>Tech:</strong> Python, SQL, dbt-style transforms, Snowflake (familiar)</p>
+                    <p>
+                        <a href="/projects/logistics-recsys.html">Case study</a>
+                        · <a href="https://github.com/dela-ea" target="_blank" rel="noopener">GitHub profile</a>
+                    </p>
+                </article>
+
+                <article class="card" role="listitem">
+                    <h3>Nowcasting Stock Markets with ML</h3>
+                    <p>Hybrid VAR + DNN forecasting pipeline with reproducible train/validate/test lifecycle.</p>
+                    <p><strong>Tech:</strong> Python, time‑series, VAR, deep learning</p>
+                    <p>
+                        <a href="/projects/nowcasting.html">Case study</a>
+                        · <a href="https://github.com/dela-ea" target="_blank" rel="noopener">GitHub profile</a>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience / Highlights -->
+        $1
+
+        <!-- Key Achievements -->
+        <section id="achievements" aria-labelledby="ach-title">
+            <h2 id="ach-title">Key Achievements</h2>
+            <div class="grid">
+                <div class="card">
+                    <ul>
+                        <li>Built a supervised ML model for patient activity prediction (~90% accuracy); reduced false positives by ~18–20%.</li>
+                        <li>Engineered Python pipelines and basic MLOps practices for deployable, reproducible models.</li>
+                        <li>Designed a SQL‑optimized recommender with real‑time tracking; ~30% query latency reduction.</li>
+                        <li>Automated validation/cleaning with Airflow & R to streamline research pipelines.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" aria-labelledby="resume-title">
+            <h2 id="resume-title">Resume</h2>
+            <p>Prefer a single page? <a href="/assets/Dela_Akpalu_Resume.pdf" target="_blank" rel="noopener">Download the PDF</a>.</p>
+            <!-- Optional: inline embed of PDF (comment out if you don't want it) -->
+            <!-- <iframe src="/assets/Dela_Akpalu_Resume.pdf" title="Resume" width="100%" height="720" style="border:1px solid var(--border); border-radius:12px;"></iframe> -->
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <p>Winston-Salem, NC · <a href="mailto:dela.eak@gmail.com">dela.eak@gmail.com</a> · <a href="tel:+13369786189">+1 (336) 978‑6189</a></p>
+            <p>Connect on <a href="https://www.linkedin.com/in/edakpalu/" target="_blank" rel="noopener">LinkedIn</a> or view my <a href="https://github.com/dela-ea" target="_blank" rel="noopener">GitHub</a>.</p>
+            <p>
+                <a class="btn" href="mailto:dela.eak@gmail.com">Email me</a>
+                <a class="btn" href="https://github.com/dela-ea" target="_blank" rel="noopener">GitHub profile</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>© <span id="year"></span> Dela Akpalu • Built with GitHub Pages. <a href="/sitemap.xml">Sitemap</a></p>
+        </div>
+    </footer>
+
+    <!-- Small JS: set the year; you can expand with theme toggles, etc. -->
+    <script>
+        (function() {
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+
+    <!-- Analytics (optional). Replace with your provider or remove. -->
+    <!-- Plausible example: <script defer data-domain="<your-domain>" src="https://plausible.io/js/script.js"></script> -->
+    <!-- Google Analytics v4 example:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+    </script> -->
+</body>
+
+</html>
