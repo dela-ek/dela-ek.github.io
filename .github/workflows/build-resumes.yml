@@ -1,0 +1,45 @@
+name: Build Both Resumes
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'assets/resumes/**'
+      - '.github/workflows/build-resumes.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full latexmk
+
+      - name: Build Data Science Resume
+        working-directory: assets/resumes
+        run: |
+          latexmk -pdf -interaction=nonstopmode resume-ds.tex
+          cp resume-ds.pdf ../resume-ds.pdf
+
+      - name: Build Teaching Resume
+        working-directory: assets/resumes
+        run: |
+          latexmk -pdf -interaction=nonstopmode resume-teaching.tex
+          cp resume-teaching.pdf ../resume-teaching.pdf
+
+      - name: Write version file
+        run: echo "${GITHUB_SHA::7}" > assets/resume-version.txt
+
+      - name: Commit and push PDFs + version file
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/resume-*.pdf assets/resume-version.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Update both resumes (${GITHUB_SHA::7})"
+            git push
+          fi
