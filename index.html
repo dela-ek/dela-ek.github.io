@@ -22,13 +22,13 @@
     <meta property="og:title" content="Dela Akpalu — Portfolio & Resume">
     <meta property="og:description" content="Projects, research, and resume.">
     <meta property="og:url" content="https://dela-ek.github.io/">
-    <meta property="og:image" content="/assets/og-image.jpg"> <!-- 1200x630 -->
+    <meta property="og:image" content="https://dela-ek.github.io/assets/og-image.jpg"> <!-- 1200x630 -->
     
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dela Akpalu — Portfolio & Resume">
     <meta name="twitter:description" content="Projects, research, and resume.">
-    <meta name="twitter:image" content="/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dela-ek.github.io/assets/og-image.jpg">
 
     <!--  Favicons (generate with real files when you can) -->
     <link rel="icon" href="/assets/favicon.ico" sizes="any">
@@ -45,20 +45,18 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Dela Akpalu",
-        "url": "https://dela-ea.github.io/",
+        "url": "https://dela-ek.github.io/",
         "jobTitle": "Statistician / Data Scientist",
         "description": "Portfolio of projects in statistics, and data science",
-        "email": "mailto:dela.eak@gmail.com",
         "sameAs": [
             "https://github.com/dela-ek",
-            "https://www.linkedin.com/in/edakpalu/",
-            "https://scholar.google.com/citations?user=<id>"
+            "https://www.linkedin.com/in/edakpalu/"
         ]
     }
     </script>
 
     <!-- Basic social sharing preview for messaging apps (fallback) -->
-    <meta name="image" content="/assets/og-image.jpg">
+    <meta name="image" content="https://dela-ek.github.io/assets/og-image.jpg">
 
     <!-- Minimal CSS reset (optional; you can move these into styles.css) -->
     <style>
@@ -113,6 +111,7 @@
         section { padding: 2rem 0; }
         footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--muted); font-size: 0.95rem; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+        .sr-only:focus { width: auto; height: auto; padding: 0.75rem 1rem; margin: 0; overflow: visible; clip: auto; top: 1rem; left: 1rem; z-index: 100; background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 0.5rem; }
     </style>
 </head>
 
@@ -124,8 +123,8 @@
     <header role="banner" aria-label="Site header">
         <div class="container">
             <nav aria-label="Primary">
-                <a href="#" class="logo" aria-label="Homepage">Dela Akpalu</a>
-                <div class="nav-links" role="navigation">
+                <a href="#home" class="logo" aria-label="Homepage">Dela Akpalu</a>
+                <div class="nav-links">
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
                     <a href="#resume">Resume</a>
@@ -139,7 +138,7 @@
         <!--  Hero / intro -->
         <section class="hero" id="home">
             <h1>From raw data to deployed models—fast, correct, reproducible</h1>
-            <p>End-to-end ML systems (pipelines → features → training → evaluation → deployment) with measurable impact: ~90% accuracy on activity prediction; ~30% faster recommendations.</p>
+            <p>End-to-end ML systems (pipelines → features → training → evaluation → deployment) with measurable impact: ~90–96% accuracy on activity prediction, depending on the evaluation setup; ~30% faster recommendations.</p>
             <p>
                <!-- <a class="btn primary" href="/assets/dela_resume.pdf" target="_blank" rel="noopener">Latest Resume (PDF)</a>
                 <a class="btn" href="https://github.com/dela-ek" target="_blank" rel="noopener">GitHub</a> -->
@@ -152,7 +151,7 @@
     <div class="grid" role="list">
         <article class="card" role="listitem">
             <h3>Human Patient Activity Prediction</h3>
-            <p>Supervised pipeline classifying patient activities with ~90% accuracy; reduced false positives via change-point features.</p>
+            <p>Supervised pipeline classifying patient activities with ~90–96% accuracy, depending on the evaluation setup; reduced false positives via change-point features.</p>
             <p><strong>Tech:</strong> Python, scikit-learn, XGBoost, ROC/PR, Airflow</p>
             <p>
                 <a href="/projects/human-activity.html">Case study</a>
