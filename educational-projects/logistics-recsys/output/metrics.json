@@ -1,0 +1,13 @@
+{
+  "project_type": "educational synthetic-data demonstration",
+  "seed": 2026,
+  "interactions": 5760,
+  "users": 320,
+  "items": 80,
+  "evaluation": "leave-last-interaction-out",
+  "k": 5,
+  "popularity_hit_rate_at_5": 0.05,
+  "popularity_mrr_at_5": 0.031614583333333335,
+  "item_cooccurrence_hit_rate_at_5": 0.09375,
+  "item_cooccurrence_mrr_at_5": 0.058020833333333334
+}

@@ -1,0 +1,17 @@
+{
+  "project_type": "educational synthetic-data demonstration",
+  "seed": 2026,
+  "rows": 6000,
+  "train_rows": 4500,
+  "test_rows": 1500,
+  "classes": [
+    "lying",
+    "sitting",
+    "stairs",
+    "standing",
+    "walking"
+  ],
+  "baseline_accuracy": 0.2,
+  "random_forest_accuracy": 0.844,
+  "random_forest_macro_f1": 0.8438204230556006
+}

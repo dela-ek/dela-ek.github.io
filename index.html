@@ -1,301 +1,102 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Character encoding and responsive scaling -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Page identity -->
-    <title>Dela Akpalu — Portfolio & Resume</title>
-    <meta name="description" content="Portfolio of Dela Akpalu — data science, machine learning, analytics, and resume.">
-    <meta name="author" content="Dela Akpalu">
-    <link rel="canonical" href="https://dela-ek.github.io/">
-
-    <!-- PWA/Theme basics (optional but nice) -->
-    <meta name="theme-color" content="#0f172a"> <!-- slate-900 -->
-    <link rel="manifest" href="/site.webmanifest"> <!-- create later (icons, name, theme) -->
-
-    <!-- Open Graph / Twitter for rich previews -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dela Akpalu">
-    <meta property="og:title" content="Dela Akpalu — Portfolio & Resume">
-    <meta property="og:description" content="Projects, research, and resume.">
-    <meta property="og:url" content="https://dela-ek.github.io/">
-    <meta property="og:image" content="https://dela-ek.github.io/assets/og-image.jpg"> <!-- 1200x630 -->
-    
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dela Akpalu — Portfolio & Resume">
-    <meta name="twitter:description" content="Projects, research, and resume.">
-    <meta name="twitter:image" content="https://dela-ek.github.io/assets/og-image.jpg">
-
-    <!--  Favicons (generate with real files when you can) -->
-    <link rel="icon" href="/assets/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- 180x180 -->
-
-    <!-- Styles: keep it simple (use your own CSS or a framework) -->
-    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/styles.css">
-
-    <!--  Structured data (helps SEO). Fill your real profiles/urls. -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Dela Akpalu",
-        "url": "https://dela-ek.github.io/",
-        "jobTitle": "Statistician / Data Scientist",
-        "description": "Portfolio of projects in statistics, and data science",
-        "sameAs": [
-            "https://github.com/dela-ek",
-            "https://www.linkedin.com/in/edakpalu/"
-        ]
-    }
-    </script>
-
-    <!-- Basic social sharing preview for messaging apps (fallback) -->
-    <meta name="image" content="https://dela-ek.github.io/assets/og-image.jpg">
-
-    <!-- Minimal CSS reset (optional; you can move these into styles.css) -->
-    <style>
-        :root {
-            --bg: #0b1020;        /* dark base */
-            --panel: #0f172a;     /* slate-900 */
-            --text: #e5e7eb;      /* gray-200 */
-            --muted: #a1a1aa;     /* zinc-400 */
-            --accent: #22d3ee;    /* cyan-400 */
-            --card: #111827;      /* gray-900 */
-            --border: #1f2937;    /* gray-800 */
-        }
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg: #ffffff;
-                --panel: #f8fafc; /* slate-50 */
-                --text: #0f172a;  /* slate-900 */
-                --muted: #475569; /* slate-600 */
-                --accent: #0891b2;/* cyan-700 */
-                --card: #ffffff;
-                --border: #e2e8f0;/* slate-200 */
-            }
-        }
-        * { box-sizing: border-box; }
-        html, body { height: 100%; }
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-            line-height: 1.6;
-            background: var(--bg);
-            color: var(--text);
-        }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .container { width: min(1000px, 92%); margin-inline: auto; }
-        header {
-            position: sticky; top: 0; z-index: 50;
-            backdrop-filter: blur(10px);
-            background: color-mix(in oklab, var(--bg) 80%, transparent);
-            border-bottom: 1px solid var(--border);
-        }
-        nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
-        .nav-links { display: flex; gap: 1rem; }
-        .btn { display: inline-block; padding: 0.6rem 1rem; border: 1px solid var(--border); border-radius: 9999px; background: var(--panel); color: var(--text); }
-        .btn.primary { background: var(--accent); color: #0b1020; border-color: transparent; font-weight: 600; }
-        .hero { padding: 4rem 0 2rem; }
-        .hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 0.5rem; }
-        .hero p { color: var(--muted); max-width: 70ch; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
-        .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1rem; }
-        .card h3 { margin-top: 0; }
-        section { padding: 2rem 0; }
-        footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--muted); font-size: 0.95rem; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
-        .sr-only:focus { width: auto; height: auto; padding: 0.75rem 1rem; margin: 0; overflow: visible; clip: auto; top: 1rem; left: 1rem; z-index: 100; background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 0.5rem; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dela Akpalu — Data Scientist & Statistician</title>
+  <meta name="description" content="Evidence-led data science portfolio by Dela Akpalu: reproducible machine learning, statistical analysis, and technical reports.">
+  <meta name="author" content="Dela Akpalu">
+  <meta name="theme-color" content="#101b32">
+  <link rel="canonical" href="https://dela-ek.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dela Akpalu — Data Scientist & Statistician">
+  <meta property="og:description" content="Reproducible projects, measured results, and report-style case studies.">
+  <meta property="og:url" content="https://dela-ek.github.io/">
+  <meta property="og:image" content="https://dela-ek.github.io/assets/og-image.jpg">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Dela Akpalu","url":"https://dela-ek.github.io/","jobTitle":"Statistician and Data Scientist","sameAs":["https://github.com/dela-ek","https://www.linkedin.com/in/edakpalu/"]}</script>
 </head>
-
 <body>
-    <!-- Skip to content for keyboard users -->
-    <a class="sr-only" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Dela Akpalu home"><span>DA</span>Dela Akpalu</a>
+      <div class="nav-links">
+        <a href="#work">Work</a><a href="#about">About</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Header / Navigation -->
-    <header role="banner" aria-label="Site header">
-        <div class="container">
-            <nav aria-label="Primary">
-                <a href="#home" class="logo" aria-label="Homepage">Dela Akpalu</a>
-                <div class="nav-links">
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
+  <main id="main">
+    <section class="hero shell" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Data science · statistical modeling · reproducible research</p>
+        <h1>I turn analytical questions into <em>measured, explainable results.</em></h1>
+        <p class="lede">I build end-to-end analytical systems—from data validation and model design to evaluation, documentation, and decision-ready reporting.</p>
+        <div class="actions"><a class="button primary" href="#work">Explore the work</a><a class="button" href="/assets/dela_resume.pdf" target="_blank" rel="noopener">View résumé</a></div>
+      </div>
+      <aside class="hero-note" aria-label="Portfolio principles">
+        <p class="note-label">How I work</p>
+        <ol><li><span>01</span> Define the question and evaluation design.</li><li><span>02</span> Build a reproducible data-to-output workflow.</li><li><span>03</span> Report results with limits—not just headline metrics.</li></ol>
+      </aside>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="shell">
+        <div class="section-heading"><div><p class="eyebrow">Selected work</p><h2>Four projects, documented like reports</h2></div><p>Every result below is tied to a saved experiment. Educational demonstrations are clearly labeled.</p></div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="card-top"><span class="index">01</span><span class="status">Implemented repository</span></div>
+            <h3>Stock-market nowcasting</h3>
+            <p>A hybrid information-set and recurrent neural-network workflow for short-horizon market estimates, with saved validation and evaluation outputs.</p>
+            <div class="metrics"><div><strong>0.00962</strong><span>validation MAE</span></div><div><strong>313</strong><span>validation rows</span></div></div>
+            <a class="text-link" href="/projects/nowcasting.html">Read case study <span>→</span></a>
+          </article>
+          <article class="project-card">
+            <div class="card-top"><span class="index">02</span><span class="status">Implemented repository</span></div>
+            <h3>Credit-card fraud detection</h3>
+            <p>A corrected benchmark comparing supervised and anomaly-detection models under severe class imbalance.</p>
+            <div class="metrics"><div><strong>0.867</strong><span>average precision</span></div><div><strong>0.841</strong><span>F1 score</span></div></div>
+            <a class="text-link" href="/projects/cc-fraud-detection.html">Read case study <span>→</span></a>
+          </article>
+          <article class="project-card">
+            <div class="card-top"><span class="index">03</span><span class="status educational">Educational demo</span></div>
+            <h3>Human activity classification</h3>
+            <p>A seeded synthetic wearable-sensor benchmark across five activity classes with reproducible data and outputs.</p>
+            <div class="metrics"><div><strong>84.4%</strong><span>test accuracy</span></div><div><strong>0.844</strong><span>macro-F1</span></div></div>
+            <a class="text-link" href="/projects/human-activity.html">Read case study <span>→</span></a>
+          </article>
+          <article class="project-card">
+            <div class="card-top"><span class="index">04</span><span class="status educational">Educational demo</span></div>
+            <h3>Logistics recommender</h3>
+            <p>An item co-occurrence recommender evaluated against a popularity baseline on synthetic interaction data.</p>
+            <div class="metrics"><div><strong>9.38%</strong><span>Hit Rate@5</span></div><div><strong>+4.38 pp</strong><span>over baseline</span></div></div>
+            <a class="text-link" href="/projects/logistics-recsys.html">Read case study <span>→</span></a>
+          </article>
         </div>
-    </header>
+        <p class="disclaimer">Portfolio note: these are educational and research projects. Results are experimental and are not formal medical, financial, legal, operational, or investment advice.</p>
+      </div>
+    </section>
 
-    <main id="main" class="container">
-        <!--  Hero / intro -->
-        <section class="hero" id="home">
-            <h1>From raw data to deployed models—fast, correct, reproducible</h1>
-            <p>End-to-end ML systems (pipelines → features → training → evaluation → deployment) with measurable impact: ~90–96% accuracy on activity prediction, depending on the evaluation setup; ~30% faster recommendations.</p>
-            <p>
-               <!-- <a class="btn primary" href="/assets/dela_resume.pdf" target="_blank" rel="noopener">Latest Resume (PDF)</a>
-                <a class="btn" href="https://github.com/dela-ek" target="_blank" rel="noopener">GitHub</a> -->
-            </p>
-        </section>
+    <section class="about shell" id="about">
+      <div><p class="eyebrow">Profile</p><h2>Statistical rigor, practical delivery</h2></div>
+      <div class="about-copy"><p>I work across data preparation, exploratory analysis, predictive modeling, validation, and technical communication. My focus is not only whether a model runs, but whether its evaluation supports the conclusion being made.</p><div class="capabilities"><span>Python</span><span>SQL</span><span>R</span><span>scikit-learn</span><span>PyTorch</span><span>Time series</span><span>Anomaly detection</span><span>Recommender systems</span></div></div>
+    </section>
 
-        <!-- Projects -->
-        <section id="projects" aria-labelledby="projects-title">
-    <h2 id="projects-title">Selected Projects</h2>
-    <div class="grid" role="list">
-        <article class="card" role="listitem">
-            <h3>Human Patient Activity Prediction</h3>
-            <p>Supervised pipeline classifying patient activities with ~90–96% accuracy, depending on the evaluation setup; reduced false positives via change-point features.</p>
-            <p><strong>Tech:</strong> Python, scikit-learn, XGBoost, ROC/PR, Airflow</p>
-            <p>
-                <a href="/projects/human-activity.html">Case study</a>
-                · <a href="https://github.com/dela-ek" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-        </article>
-
-        <article class="card" role="listitem">
-            <h3>Logistics Analytics & Recommender System</h3>
-            <p>Scalable recommender with modular SQL transforms; 30% latency reduction through query optimization.</p>
-            <p><strong>Tech:</strong> Python, SQL, dbt-style transforms, Snowflake (familiar)</p>
-            <p>
-                <a href="/projects/logistics-recsys.html">Case study</a>
-                · <a href="https://github.com/dela-ek" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-        </article>
-
-        <!-- nowcasting project -->
-        <article class="card" role="listitem">
-            <h3>Nowcasting Stock Markets with ML</h3>
-            <p>Hybrid VAR + DNN forecasting pipeline with reproducible train/validate/test lifecycle.</p>
-            <p><strong>Tech:</strong> Python, time-series, VAR, deep learning</p>
-            <p>
-                <a href="/projects/nowcasting.html">Case study</a>
-                · <a href="https://github.com/dela-ek/now-casting" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-        </article>
-
-        <!-- fraud detection project-->
-        <article class="card" role="listitem">
-            <h3>Credit Card Fraud Detection</h3>
-            <p>Comparing accuracy and efficiency of Anomaly detection and Classification pipelines for identifying fraudulent credit card transactions. </p>
-            <p><strong>Tech:</strong> Python, Pandas, NumPy, scikit-learn, anomaly detection, classification</p>
-            <p>
-                <a href="/projects/cc-fraud-detection.html">Case study</a>
-                . <a href="https://github.com/dela-ek/cc-fraud-detection" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-        </article>
-    </div>
-</section>
-
-
-        <!-- Experience / Highlights -->
-        <section id="experience" aria-labelledby="exp-title">
-            <h2 id="exp-title">Experience & Highlights</h2>
-            <div class="grid">
-
-                <!-- Core strengths -->
-                <div class="card">
-                    <h3>What I Do</h3>
-                    <ul>
-                        <li>Build end-to-end data & ML systems (pipelines, features, training, evaluation, deployment).</li>
-                        <li>Design reproducible modeling workflows with versioning, testing, and basic MLOps.</li>
-                        <li>Optimize analytics workloads with Python/SQL; improve latency and reliability.</li>
-                        <li>Create clear technical documentation and dashboards for decision-making.</li>
-                    </ul>
-                </div>
-
-                <!-- Tech stack -->
-                <div class="card">
-                    <h3>Tech Stack</h3>
-                    <ul>
-                        <li><strong>Programming:</strong> Python (Pandas, NumPy, scikit-learn, XGBoost), SQL, R, C++, Julia, SAS</li>
-                        <li><strong>ML:</strong> Supervised learning, model selection & validation, anomaly detection, time series</li>
-                        <li><strong>Data tools:</strong> Airflow, dbt (familiar), Snowflake (familiar), Power BI, Tableau, REDCap, MySQL</li>
-                        <li><strong>Methods:</strong> Agile, Data Mining, Statistical Modeling, Recommender Systems</li>
-                    </ul>
-                </div>
-
-                <!-- Achievements -->
-                <div class="card">
-                    <h3>Key Achievements</h3>
-                    <ul>
-                        <li>Built a supervised ML model for patient activity prediction (~96% accuracy); reduced false positives by ~18–21%.</li>
-                        <li>Engineered a Python/SQL recommender; ~32% reduction in query latency with a real-time tracking layer.</li>
-                        <li>Automated data cleaning & validation pipelines (Airflow/R), boosting efficiency and reproducibility.</li>
-                        <li>Developed a hybrid VAR + neural network system for stock-market nowcasting.</li>
-                    </ul>
-                </div>
-
-                <!-- Experience -->
-                <div class="card">
-                    <h3>Experience</h3>
-
-                    <p class="mb-1"><strong>Research Assistant — Wake Forest University</strong> <span class="muted">2024–2025</span></p>
-                    <ul class="mb-3">
-                        <li>Improved data quality and integrity in REDCap to support reliable storage and retrieval.</li>
-                        <li>Automated cleaning and validation workflows in R/Airflow to cut manual effort and enhance reproducibility.</li>
-                        <li>Structured and maintained large datasets in cross-functional settings; delivered analysis to inform decisions.</li>
-                    </ul>
-
-                    <p class="mb-1"><strong>Teaching Assistant — Wake Forest University</strong> <span class="muted">2023–2025</span></p>
-                    <ul>
-                        <li>Supported introductory statistics courses with feedback and problem-solving sessions for 50+ students.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-        
-
-        <!-- Resume -->
-        <section id="resume" aria-labelledby="resume-title">
-            <h2 id="resume-title">Resume</h2>
-            
-            <!-- two resume style-->
-            <p>
-            <a class="btn primary" id="resumeDSLink" href="/assets/resumes/resume-ds.pdf" target="_blank" rel="noopener">
-                Data Science Resume (PDF)
-            </a>
-            <a class="btn primary" id="resumeTeachingLink" href="/assets/resumes/resume-teaching.pdf" target="_blank" rel="noopener">
-                Teaching Resume (PDF)
-            </a>
-            </p>
-
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" aria-labelledby="contact-title">
-            <h2 id="contact-title">Contact</h2>
-            <p>Newark, NJ · <a href="mailto:dela.eak@gmail.com">dela.eak@gmail.com</a> · <a href="tel:+13369786189">+1 (336) 978‑6189</a></p>
-            <p>Connect on <a href="https://www.linkedin.com/in/edakpalu/" target="_blank" rel="noopener">LinkedIn</a> or view my <a href="https://github.com/dela-ek" target="_blank" rel="noopener">GitHub</a>.</p>
-            <p>
-                <a class="btn" href="mailto:dela.eak@gmail.com">Email me</a>
-                
-            </p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <div class="container">
-            <p>© <span id="year"></span> Dela Akpalu • Built with GitHub Pages. <a href="/sitemap.xml">Sitemap</a></p>
+    <section class="experience-section">
+      <div class="shell experience-grid">
+        <div><p class="eyebrow">Experience</p><h2>Research and teaching</h2></div>
+        <div class="timeline">
+          <article><div><h3>Research Assistant</h3><p>Wake Forest University</p></div><time>2024–2025</time><p>Improved REDCap data quality, automated cleaning and validation workflows, and supported reproducible analysis across large datasets.</p></article>
+          <article><div><h3>Teaching Assistant</h3><p>Wake Forest University</p></div><time>2023–2025</time><p>Supported introductory statistics instruction, feedback, and problem-solving sessions for more than 50 students.</p></article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Small JS: set the year; you can expand with theme toggles, etc. -->
-    <script>
-        (function() {
-            const y = document.getElementById('year');
-            if (y) y.textContent = new Date().getFullYear();
-        })();
-    </script>
+    <section class="cta shell" id="resume"><div><p class="eyebrow">Résumé</p><h2>Need the concise version?</h2><p>Open the current résumé for education, experience, methods, and technical skills.</p></div><a class="button primary" href="/assets/dela_resume.pdf" target="_blank" rel="noopener">Open PDF résumé</a></section>
+  </main>
 
+  <footer id="contact"><div class="shell footer-grid"><div><p class="eyebrow">Contact</p><h2>Let’s talk about the question behind the data.</h2></div><div class="contact-links"><a href="mailto:dela.eak@gmail.com">dela.eak@gmail.com</a><a href="https://www.linkedin.com/in/edakpalu/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/dela-ek" target="_blank" rel="noopener">GitHub ↗</a><p>Newark, New Jersey</p></div></div><div class="shell copyright">© <span id="year"></span> Dela Akpalu · Built with GitHub Pages</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
-
 </html>
