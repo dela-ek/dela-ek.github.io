@@ -11,9 +11,10 @@ I use Python, R, and SQL for reproducible analysis, statistical modeling, and ma
 | Credit-card fraud detection | Logistic regression, random forest, Isolation Forest; saved average precision 0.867 and F1 0.841 on a fixed model-selection split | [Read](https://dela-ek.github.io/projects/cc-fraud-detection.html) |
 | Time-series nowcasting | PyTorch recurrent models; chronological validation on generated market-style data | [Read](https://dela-ek.github.io/projects/nowcasting.html) |
 | Human activity classification | Synthetic sensor data; five classes; 84.4% held-out accuracy versus 20% baseline | [Read](https://dela-ek.github.io/projects/human-activity.html) |
+| Causal inference & experimentation | Randomized A/B experiment, market-level DiD, event study, placebo and trend sensitivity on synthetic data; [public code](https://github.com/dela-ek/causal-inference-lab) | [Read](https://dela-ek.github.io/projects/causal-inference.html) |
 | Recommendation systems | Synthetic interactions; item co-occurrence versus popularity; leave-last-interaction-out evaluation | [Read](https://dela-ek.github.io/projects/logistics-recsys.html) |
 
-Public demonstration code is available under [educational-projects](educational-projects). Other source repositories remain private; the portfolio provides public case studies.
+The causal inference project has a standalone public repository. Additional public demonstration code is available under [educational-projects](educational-projects). Other source repositories remain private; the portfolio provides public case studies.
 
 Project results reflect the documented datasets and evaluation designs. Synthetic-data studies are labeled in their case studies.
 
