@@ -16,6 +16,11 @@ I use Python, R, and SQL for reproducible analysis, statistical modeling, and ma
 | Demand forecasting with uncertainty | Modular Python pipeline; synthetic data, held-out evaluation, saved models, tests and CI; private code available on request | [Read](https://dela-ek.github.io/projects/demand-forecasting.html) |
 | Retention uplift and policy evaluation | Modular Python pipeline; synthetic data, held-out evaluation, saved models, tests and CI; private code available on request | [Read](https://dela-ek.github.io/projects/retention-uplift.html) |
 | Customer churn survival analysis | Modular Python pipeline; synthetic data, held-out evaluation, saved models, tests and CI; private code available on request | [Read](https://dela-ek.github.io/projects/customer-survival.html) |
+| Clinical trial analysis and missing outcomes | Synthetic randomized study; modular pipeline, tests and reproduction checks; private code available on request | [Read](https://dela-ek.github.io/projects/clinical-trial-analysis.html) |
+| SQL product funnel and cohort analytics | SQL · Synthetic product events; modular pipeline, tests and reproduction checks; private code available on request | [Read](https://dela-ek.github.io/projects/product-funnel-analytics.html) |
+| Wholesale customer segmentation | Open UCI dataset; modular pipeline, tests and reproduction checks; private code available on request | [Read](https://dela-ek.github.io/projects/wholesale-segmentation.html) |
+| Model monitoring and drift detection | Synthetic monitoring study; modular pipeline, tests and reproduction checks; private code available on request | [Read](https://dela-ek.github.io/projects/model-monitoring.html) |
+| Survey weighting and nonresponse analysis | Synthetic survey study; modular pipeline, tests and reproduction checks; private code available on request | [Read](https://dela-ek.github.io/projects/survey-weighting.html) |
 
 The causal inference project has a standalone private repository. Additional public demonstration code is available under [educational-projects](educational-projects). Other source repositories remain private; the portfolio provides public case studies.
 
